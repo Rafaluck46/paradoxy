@@ -3,11 +3,54 @@
     animation-name: slidein;
 }
 
+.background-color {
+    background-color: #ceddef
+}
+
+img {
+    max-width: 1200px;
+    max-height: 640px;
+}
+
+.intro{
+    display: contents;
+}
+
+.carousel-item-width {
+    border-radius: 5px;
+    display: inline-grid;
+    width: 50% !important;
+}
+
+.carousel {
+    height: 780px;
+}
+
+@media screen and (max-width: 700px) {
+    .carousel-item-width {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .carousel {
+        height: 580px;
+    }
+}
+
+.brand-logo>img {
+    display: block;
+    
+    width: 100px;
+    height: 60px;
+    
+}
+
 @keyframes slidein {
     0% {
         opacity: 0;
         margin-left: 100%;
-        width: 300%;
+        width: 100%;
     }
     50% {
         opacity: 0.3;
