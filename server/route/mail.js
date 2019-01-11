@@ -52,7 +52,7 @@ var sendMail = (req, res) => {
 
     //deal with request 
     mailRequest.from = `Paradoxy Ticket <paradoxy.dev@gmail.com>`;
-    mailRequest.to = 'rafa.luck46@gmail.com';/* resposta42@gmail.com, paradoxy.dev@gmail.com'*/;
+    mailRequest.to = '';
     mailRequest.html = `${mailRequest.email}\n\n<h1>${mailRequest.title}</h1>\n\n<h3>${mailRequest.text}</h3>`;
     mailRequest.subject = `${mailRequest.name} (${mailRequest.company}) - Tel:${mailRequest.phone}`;
 
