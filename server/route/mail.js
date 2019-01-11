@@ -15,8 +15,8 @@ var transportMail = function (mailoptions) {
         secure: true,
         requireTLS: true,
         auth: {
-            user: 'paradoxy.dev@gmail.com',
-            pass: 'Az@th0th'
+            user: '',
+            pass: ''
         }
     });
 

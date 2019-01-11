@@ -1,11 +1,11 @@
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize({
-    host: '157.230.137.133',
-    database: 'paradoxy',
-    username: 'root',
-    password: 'Az@th0th',
-    dialect: 'mysql',
+    host: '',
+    database: '',
+    username: '',
+    password: '',
+    dialect: '',
     pool: {
         max: 5,
         min: 0,
