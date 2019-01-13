@@ -2,15 +2,19 @@
 //node dependencies
 //const functions = require('firebase-functions');
 const express = require('express');
-
+const cors = require('cors');
 
 //local dependencies
 const mailRoute = require('./route/mail');
 
+//implementation
 const app = express();
-
 app.use(express.json());
-app.post('/mail/sendmail', mailRoute.sendMail);
+
+app.post('/mail/sendmail', cors({
+    origin: "*",
+    methods: "POST",
+}), mailRoute.sendMail);
 
 app.listen('5000')
 //const functions = require('firebase-functions');
