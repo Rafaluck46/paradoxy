@@ -38,4 +38,12 @@ Contact.prototype.toJson = function () {
     }
 }
 
+Contact.prototype.clearFields = function () {
+    [...this.el].forEach(elem => {
+        debugger;
+        elem.value = '';
+        elem.classList.remove('valid');
+    })
+}
+
 export default Contact;

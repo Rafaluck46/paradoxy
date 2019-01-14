@@ -102,11 +102,23 @@
 
             M.AutoInit();
             var contactForm = new Contact();
-            document.querySelector('.submitMail').addEventListener('click', function (event) {
-                debugger;
+            var submitMail = document.querySelector('.submitMail');
+            submitMail.addEventListener('click', (event) => {
                 if (!contactForm.isValidForm()) return;
                 sendMail(contactForm.toJson());
+                setTimeout(() => {
+                    contactForm.clearFields();
+                    mailSended();
+                }, 500)
+
             });
+
+            function mailSended() {
+                submitMail.classList.remove('blue', 'darken-1');
+                submitMail.classList.add('teal', 'accent-3');
+                submitMail.classList.add('black-text');
+                submitMail.firstChild.textContent = 'ENCAMINHADO';
+            }
 
         }())
     </script>

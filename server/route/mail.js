@@ -15,8 +15,8 @@ var transportMail = function (mailoptions) {
         secure: true,
         requireTLS: true,
         auth: {
-            user: '',
-            pass: ''
+            user: 'paradoxy.dev@gmail.com',
+            pass: 'Az@th0th'
         }
     });
 
@@ -52,12 +52,12 @@ var sendMail = (req, res) => {
 
     //deal with request 
     mailRequest.from = `Paradoxy Ticket <paradoxy.dev@gmail.com>`;
-    mailRequest.to = '';
+    mailRequest.to = 'rafa.luck46@gmail.com';
     mailRequest.html = `${mailRequest.email}\n\n<h1>${mailRequest.title}</h1>\n\n<h3>${mailRequest.text}</h3>`;
     mailRequest.subject = `${mailRequest.name} (${mailRequest.company}) - Tel:${mailRequest.phone}`;
 
     //send mail
-    transportMail(req.body).catch(err => {
+    transportMail(mailRequest).catch(err => {
         console.log(err);
     });
 }
