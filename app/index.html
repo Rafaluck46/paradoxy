@@ -177,18 +177,10 @@
             </div>
         </div>
     </footer>
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large blue darken-1" id="float-btn">
-            <i class="large material-icons">mode_edit</i>
-        </a>
-    </div>
     <script src="js/materialize.js"></script>
     <script>
         (function () {
             M.AutoInit();
-            document.getElementById('float-btn').addEventListener('click', function (event) {
-                document.querySelector('footer>h4').scrollIntoView({ behavior: 'smooth' });
-            });
         }());
     </script>
 </body>
