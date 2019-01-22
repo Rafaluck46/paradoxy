@@ -40,6 +40,22 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     color: #5893d4;
 }
 
+.nav-item-hovered:hover {
+    animation-duration: 300s;
+    animation: changecolors !important;
+}
+
+@keyframes changecolors {
+    from {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
 .background-color {
     background-color: #ceddef
 }
@@ -49,7 +65,7 @@ img {
     max-height: 640px;
 }
 
-blockquote{
+blockquote {
     border-color: #5893d4;
 }
 
@@ -99,4 +115,31 @@ blockquote{
         margin-left: 0%;
         width: 100%;
     }
+}
+
+.section-black-image {
+    background-image: url('/assets/paradoxy-black-image.jpg')
+}
+
+.responsiveimg {
+    width: 100%;
+    height: auto;
+}
+
+.paradoxy-logo {
+    width: 200px;
+}
+
+.paradoxy-box {
+    border-radius: 8px;
+    padding-top: 15px;
+    border: solid 2px black;
+    padding: 20px !important;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

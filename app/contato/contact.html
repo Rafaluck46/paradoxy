@@ -19,7 +19,7 @@
                 <a href="/" class="brand-logo left"><img src="https://firebasestorage.googleapis.com/v0/b/paradoxy-home.appspot.com/o/assets%2FParadoxyLogoOnly.svg?alt=media&token=7d9ada67-8937-487d-a58a-660c323c8206"
                         alt="brand-logo"></a>
                 <ul id="nav-mobile" class="right">
-                    <li><a href="/pages/contact.html">Contato</a></li>
+                    <li><a href="/contato/contact.html">Contato</a></li>
                 </ul>
             </div>
         </nav>
@@ -100,17 +100,21 @@
 
         (function () {
 
+            var sendedMail = false;
             M.AutoInit();
             var contactForm = new Contact();
+
             var submitMail = document.querySelector('.submitMail');
             submitMail.addEventListener('click', (event) => {
+                if (sendedMail) return;
                 if (!contactForm.isValidForm()) return;
                 sendMail(contactForm.toJson());
                 setTimeout(() => {
                     contactForm.clearFields();
                     mailSended();
-                }, 500)
+                }, 500);
 
+                sendedMail = true;
             });
 
             function mailSended() {

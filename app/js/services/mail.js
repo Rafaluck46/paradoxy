@@ -1,7 +1,6 @@
 var baseUrl = '/mail';
 
 export function sendMail(data) {
-    debugger;
     return fetch(`${baseUrl}/sendmail`,
         {
             method: 'POST',

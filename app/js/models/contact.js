@@ -40,9 +40,8 @@ Contact.prototype.toJson = function () {
 
 Contact.prototype.clearFields = function () {
     [...this.el].forEach(elem => {
-        debugger;
         elem.value = '';
-        elem.classList.remove('valid');
+        elem.parentElement.querySelector('label').classList.remove('active')
     })
 }
 
